@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>HTML</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<p>Ejercicio 2</p>
+
+<table border="1" >
+  <tr>
+    <th>Nombre de la ruina</th>
+    <th>Descripción</th>
+    <th>Años de construcción</th>
+  </tr>
+  <tr>
+    <td>La ciudad de Pompeya</td>
+    <td> 
+      <p>Pompeya se ha conservado como un paraíso arqueológico, a pesar de los muchos expolios de los que fue víctima tras su descubrimiento y del poco cuidado con que las autoridades se han tomado su conservación.</p>
+      <p>Se conservan allí calles enteras con pavimentos intactos, casas con sus habitaciones que no han cambiado desde que fueron utilizadas por sus primeros ocupantes, tabernas, prostíbulos, edificios públicos, todo ello en un estado de conservación incomparable y verdaderamente sorprendente.</p> 
+    </td>
+    <td>79 BC</td>
+  </tr>
+ 
+
+</table>
+     <br/>
+      <p>Cantidad mínima de caracteres suficiente para almacenar cualquier número de año en el rango de A a B</p>
+     <br/>
+      <Label>Inicio</Label>
+     <input type="number" name="inicio" id="inicio" min="1" max="4" value="1" readonly>
+     <br/>
+     <br/>
+     <Label>Fin</Label>
+     <input type="number" name="fin" id="fin" min="1" max="4" value="2012" readonly>
+     <br/>
+     <br/>
+     <Label>Tipo</Label>
+     <select id="tipo" > 
+      <option value="BC-AD">BC-AD</option>
+ 
+        
+
+     </select>
+     <br/>
+     <br/>
+     <button type="button" onclick="ejercicio2();">Calcular</button>
+     <br/>
+     <div id="resultado"> </div>
+    <script type="text/javascript">
+    function ejercicio2(){
+      
+         var  inicio=document.getElementById('inicio').value;
+         var fin=document.getElementById('fin').value;
+         var tipo=document.getElementById('tipo').value;
+         var numinicio=inicio.length;
+         var numfin=fin.length;
+         var numtipo=tipo.length;
+
+         var suma=numinicio + numfin + numtipo;
+        
+      
+        var resultado ="El número de caracteres es :" + suma;
+ 
+      document.getElementById("resultado").innerHTML=resultado; 
+
+    }
+       
+        
+    
+    </script>
+</body>
+</html>
